@@ -21,5 +21,5 @@ xmlhttp.send();
 }
 
 chart_get('https://api.covid19api.com/countries', function(data) {
-  console.log(data);
+  
 })
