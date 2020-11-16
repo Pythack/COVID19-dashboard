@@ -20,6 +20,21 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
 
-chart_get('https://api.covid19api.com/countries', function(data) {
-  
-})
+
+var addtochart = document.getElementById('addtochart');
+addtochart.addEventListener('click', function() {
+  country = document.getElementById('country').value;
+  country.replace(' ', '-');
+  chart_get('https://api.covid19api.com/country/' + country + '/status/confirmed', function(data) {
+    var data = [
+  {
+    x: ['giraffes', 'orangutans', 'monkeys'],
+    y: [20, 14, 23],
+    type: 'bar'
+  }
+];
+
+  Plotly.newPlot('myDiv', data);
+
+  });
+});

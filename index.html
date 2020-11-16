@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <title>COVID19 Dashboard</title>
     <link rel="stylesheet" href="./main.css"/>
-    <script src="./main.js"/>
-    <script src='https://cdn.plot.ly/plotly-latest.min.js'/>
+    <script src="./main.js"></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
   </head>
   <body>
-    <div id="chart"></div>
+    <div id="chart">
+      <label for="country">Country</label><br/>
+      <input name="counrty" id="country" type="text">
+      <button id="addtochart">Add to chart</button>
+      <br/>
+      <div id="country_chart">
+      </div>
+    </div>
   </body>
 </html>
